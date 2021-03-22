@@ -15,7 +15,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800, 700);
+  createCanvas(650, 800);
   // Create the video
   video = createCapture(VIDEO);
   video.hide();
@@ -32,7 +32,7 @@ function draw() {
   background(0);
 
   // Draw the video
-  image(video, 0, 0, 800, 600);
+  image(video, 0, 0, 650, 700);
 
   // Draw the label aka what the item is
   textSize(32);

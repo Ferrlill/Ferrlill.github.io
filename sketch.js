@@ -62,12 +62,12 @@ function draw() {
     //Draw rectangle
     rectMode(CENTER);
     fill(100);
-    rect(width / 2, height / 2, 600, 40);
+    rect(width / 2, height / 4, 600, 40);
 
     // Draw the title
-    textSize(30);
+    textSize(20);
     fill(255);
-    text(title, width / 2, height / 2);
+    text(title, width / 2, height / 4);
 }
 
 //  Get the classification

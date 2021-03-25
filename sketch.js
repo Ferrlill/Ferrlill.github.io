@@ -15,7 +15,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 800);
+  createCanvas(500, 800);
   // Create the video
   video = createCapture(VIDEO);
   video.hide();
@@ -32,13 +32,13 @@ function draw() {
   background(0);
 
   // Draw the video
-  image(video, 0, 0, 600, 700);
+  image(video, 0, 0, 500, 700);
 
   // Draw the label aka what the item is
-  textSize(32);
+  textSize(38);
   textAlign(CENTER, CENTER);
   fill(255);
-  text(label, width / 2, height - 16);
+  text(label, width / 2, height - 35);
 
   // Draw the title aka what it says to do 
   // Default is image not recognized

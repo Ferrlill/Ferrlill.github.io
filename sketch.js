@@ -32,13 +32,14 @@ function draw() {
   background(0);
 
   // Draw the video
-  image(video, 0, 0, displayWidth, displayHeight - 100 );
+  image(video, 0, 0, displayWidth, displayHeight - 100);
 
   // Draw the label aka what the item is
   textSize(38);
   textAlign(CENTER, CENTER);
   fill(255);
-  text(label, width / 2, height - 35);
+  textFont('Georgia');
+  text(label, width / 2, height - 40);
 
   // Draw the title aka what it says to do 
   // Default is image not recognized
@@ -67,6 +68,7 @@ function draw() {
     // Draw the title
     textSize(20);
     fill(255);
+    textFont('Georgia'); 
     text(title, width / 2, height / 4);
 }
 

@@ -62,7 +62,7 @@ function draw() {
   }
     //Draw rectangle
     rectMode(CENTER);
-    fill(100);
+    fill('green');
     rect(width / 2, height / 4, 600, 40);
 
     // Draw the title

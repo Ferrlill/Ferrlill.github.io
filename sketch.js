@@ -15,24 +15,22 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(displayWidth, displayHeight); //canvas will alter to fit screen
   // Create the video
-  video = createCapture(VIDEO);
+  video = createCapture(VIDEO); 
   video.hide();
   // Start classifying
   classifyVideo();
 }
-
 // Classify the video
 function classifyVideo() {
   classifier.classify(video, gotResults);
 }
-
 function draw() {
   background(0);
 
   // Draw the video
-  image(video, 0, 0, displayWidth, displayHeight - 100);
+  image(video, 0, 0, displayWidth, displayHeight - 100); //canvas has black space at bottom for words
 
   // Draw the label aka what the item is
   textSize(38);
@@ -41,7 +39,7 @@ function draw() {
   textFont('Georgia');
   text(label, width / 2, height - 40);
 
-  // Draw the title aka what it says to do 
+  // Draw the title aka disposal instructions
   // Default is image not recognized
   let title = "Please place item in frame";
   
@@ -60,13 +58,13 @@ function draw() {
   else if (label == "Plastic"){
     title = "That item goes in glass/metal/plastic bin!";
   }
-    //Draw rectangle
+    //Draw rectangle behind disposal instructions
     rectMode(CENTER);
     fill('green');
     rect(width / 2, height / 4, 600, 40);
 
-    // Draw the title
-    textSize(20);
+    // Draw the disposal instructions
+    textSize(17);
     fill(255);
     textFont('Georgia'); 
     text(title, width / 2, height / 4);
@@ -79,7 +77,7 @@ function gotResults(error, results) {
     console.error(error);
     return;
   }
-  // Store the label and classify again (loop)
+  // Store the label and classify again (loop so that it can change its classification and disposal instructions)
   label = results[0].label;
   classifyVideo();
 }
